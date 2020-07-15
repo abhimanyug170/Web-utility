@@ -1,6 +1,7 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
 
+import shortUrlReducer from "./shortUrlReducer";
 
 export default combineReducers({
-    dummy: (state, action) => 2
-})
+  shortUrl: shortUrlReducer
+});
