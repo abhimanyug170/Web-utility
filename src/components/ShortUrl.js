@@ -1,47 +1,41 @@
 import React, { Component } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
-import { connect } from "react-redux";
 
-import { getShortUrl } from "../actions";
+import "./ShortUrl.css";
 
 class ShortUrl extends Component {
-  state = { url: "" };
-
-  onFormSubmit = e => {
-    e.preventDefault();
-    this.props.getShortUrl({ longUrl: this.state.url });
-  };
-
   render() {
-    const { shortUrl } = this.props;
     return (
-      <div>
-        <Form onSubmit={this.onFormSubmit}>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Control
-              type="text"
-              placeholder="Enter URL"
-              onChange={e => this.setState({ url: e.target.value })}
-            />
-            <Form.Text className="text-muted">
-              Enter Address of website to be shorten.
-            </Form.Text>
-          </Form.Group>
-
-          {shortUrl && <Alert variant="success">shortUrl</Alert>}
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+      <div className="body-div">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-6 mt-5">
+              <form className="border border-success rounded p-5 form-div mt-5">
+                <div className="form-group mb-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputAddress"
+                    placeholder="Enter URL"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary sub-button">
+                  Submit
+                </button>
+                <div className="form-group mt-5">
+                  <label for="inputAddress">Your URL</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputAddress"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    ShortUrl: state.ShortUrl
-  };
-};
-
-export default connect(mapStateToProps, { getShortUrl })(ShortUrl);
+export default ShortUrl;

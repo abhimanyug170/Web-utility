@@ -16,7 +16,7 @@ class App extends Component {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/screenshot" exact component={Screenshot} />
-              <Route path="/short-url" exact component={ShortUrl} />
+              <Route path="/shortUrl" exact component={ShortUrl} />
             </Switch>
           </div>
         </Router>

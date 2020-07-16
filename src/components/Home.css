@@ -1,0 +1,41 @@
+.body-div {
+  background-color: burlywood;
+  height: 100vh;
+}
+
+.top-div {
+  color: white;
+  font-size: 50px;
+  font-style: italic;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding-top: 75px;
+}
+
+.button-div {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.button-big {
+  height: 12vh;
+  width: 15vw;
+  font-size: 30px;
+}
+
+.internal-div {
+  width: 35%;
+}
+
+.text-div {
+  color: white;
+  font-size: 20px;
+}
