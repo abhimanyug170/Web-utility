@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 import "./Home.css";
 
@@ -10,9 +12,14 @@ class Home extends Component {
         <div className="button-div">
           <div className="internal-div">
             <div className="mb-5">
-              <button type="button" class="btn btn-primary button-big">
+              <Button
+                as={Link}
+                to="/short-url"
+                variant="primary"
+                className="button-big pt-3"
+              >
                 Short URL
-              </button>
+              </Button>
             </div>
             <div className="mt-5 text-div">
               Bubble is a damaging Water-type move introduced in Generation I.
@@ -20,9 +27,14 @@ class Home extends Component {
           </div>
           <div className="internal-div">
             <div className="mb-5">
-              <button type="button" class="btn btn-primary button-big">
+              <Button
+                as={Link}
+                to="/screenshot"
+                variant="primary"
+                className="button-big pt-3"
+              >
                 Screenshot
-              </button>
+              </Button>
             </div>
             <div className="mt-5 text-div">
               Withdraw is a non-damaging Water-type move introduced in
